@@ -4,101 +4,120 @@ Mailbot is a full-stack AI-powered email assistant that connects securely to Gma
 
 Built with a React + Vite frontend and a FastAPI backend, Mailbot aims to reduce inbox overload and help users consume email content faster.
 
-**🚀 Features**
+---
+
+## 🚀 Features
 
 **✅ Frontend**
 
-Modern UI built with React + Vite
+  - Modern UI built with React + Vite
 
-Clean dashboard for viewing:
+  - Clean dashboard for viewing:
 
-Email summaries
+  - Email summaries
 
-Digest reports
+  - Digest reports
 
-Categories & insights
+  - Categories & insights
 
-Google OAuth login flow
+  - Google OAuth login flow
 
-API integration with backend
+  - API integration with backend
 
-Responsive, minimal design
+  - Responsive, minimal design
+
+---
 
 **🛠️ Backend**
 
-FastAPI REST API
+  - FastAPI REST API
 
-Google OAuth2 authentication
+  - Google OAuth2 authentication
 
-Gmail email fetching
+  - Gmail email fetching
 
-AI-powered summarization
+  - AI-powered summarization
 
-Daily digest generator
+  - Daily digest generator
 
-Notification sending via Resend
+  - Notification sending via Resend
 
-Secure user management
+  - Secure user management
 
-Automated task scheduling
+  - Automated task scheduling
 
-Full Pytest test suite
+  - Full Pytest test suite
 
-**🧩 Tech Stack**
+---
 
-**Frontend**
+## 🧩 Tech Stack
 
-React (Vite)
+### Frontend:
 
-Axios
+     - React (Vite)
 
-React Router
+     - Axios
 
-TailwindCSS (if used—can remove if not)
+     - React Router
 
-Context API / LocalStorage
+     - TailwindCSS
 
-**Backend**
+     - Context API / LocalStorage
 
-Python 3.x
+### Backend:
 
-FastAPI
+     - Python 3.x
 
-Google OAuth2
+     - FastAPI
 
-Resend Email API
+     - Google OAuth2
 
-OpenAI / LLM AI Summarization
+     - Resend Email API
 
-Pytest
+     - OpenAI / LLM AI Summarization
 
-Uvicorn
+     - Pytest
 
-**📁 Project Structure**
+     - Uvicorn
+
+---
+
+## 📁 Project Structure
 
 <img width="401" height="482" alt="image" src="https://github.com/user-attachments/assets/6684651a-0f1d-4013-b60d-a70fd53125f1" />
 
-**⚙️ Installation & Setup**
+---
+
+## ⚙️ Installation & Setup
 
 🖥️ 1. Clone Repository
-git clone https://github.com/your-repo/mailbot.git
-cd mailbot
 
-🌐 Frontend Setup (React + Vite)
+       git clone https://github.com/your-repo/mailbot.git
+       
+       cd mailbot
+
+
+**🌐 Frontend Setup (React + Vite)**
+
 1. Install dependencies
-cd frontend
-npm install
 
-2. Create .env file
+        cd frontend
+
+        npm install
+   
+
+3. Create .env file
 
 Include:
 
-VITE_BACKEND_URL=http://localhost:8000
-VITE_GOOGLE_CLIENT_ID=your_google_client_id
+       VITE_BACKEND_URL=http://localhost:8000
+       
+       VITE_GOOGLE_CLIENT_ID=your_google_client_id
+
 
 3. Run the frontend
-npm run dev
 
+       npm run dev
 
 The app will be available at:
 
@@ -107,115 +126,136 @@ The app will be available at:
 **🔧 Backend Setup (FastAPI)**
 
 1. Create a virtual environment
-cd backend
-python -m venv venv
-source venv/bin/activate       # Mac/Linux
-venv\Scripts\activate          # Windows
 
-2. Install dependencies
-pip install -r requirements.txt
+        cd backend
 
-3. Create a .env file
-GOOGLE_CLIENT_ID=your_client_id
-GOOGLE_CLIENT_SECRET=your_client_secret
-RESEND_API_KEY=your_resend_api_key
-OPENAI_API_KEY=your_api_key
+        python -m venv venv
+ 
+        source venv/bin/activate       # Mac/Linux
 
-4. Run the backend
-uvicorn main:app --reload
+        venv\Scripts\activate          # Windows
+
+3. Install dependencies
+
+        pip install -r requirements.txt
+
+4. Create a .env file
+
+       GOOGLE_CLIENT_ID=your_client_id
+
+       GOOGLE/_CLIENT_SECRET=your_client_secret
+
+       RESEND_API_KEY=your_resend_api_key
+
+       OPENAI_API_KEY=your_api_key
+
+5. Run the backend
+
+       uvicorn main:app --reload
 
 
 The backend runs at:
 
 👉 http://localhost:8000
 
-**🔗 Connecting Frontend & Backend**
+---
+
+## 🔗 Connecting Frontend & Backend
 
 The frontend uses:
 
-VITE_BACKEND_URL=http://localhost:8000
+       VITE_BACKEND_URL=http://localhost:8000
 
 
 The backend exposes the following key endpoints:
 
 **📡 Backend API Endpoints**
 
-Auth
+**Auth** -
 
-GET /auth/google – start OAuth flow
+       GET /auth/google – start OAuth flow
 
-GET /auth/google/callback – OAuth redirect
+       GET /auth/google/callback – OAuth redirect
 
-Emails
+**Emails** -
 
-POST /api/emails/fetch – fetch & process emails
+       POST /api/emails/fetch – fetch & process emails
 
-POST /api/emails/summarize – generate AI summaries
+       POST /api/emails/summarize – generate AI summaries
 
-Digest
+**Digest** -
 
-POST /api/digest – generate/send daily digest
+       POST /api/digest – generate/send daily digest
 
-Notifications
+**Notifications** -
 
-POST /api/notifications – resend notifications
+       POST /api/notifications – resend notifications
 
-Users
+**Users** -
 
-GET/POST /api/users – user management
+       GET/POST /api/users – user management
 
-**🧪 Testing**
+---
 
-Run backend tests:
+## 🧪 Testing
 
-cd backend
-./run_tests.sh
+### Run backend tests:
+
+        cd backend
+
+        ./run_tests.sh
 
 
-Includes:
+### Includes:
 
-Unit tests
+   - Unit tests
 
-Integration tests
+   - Integration tests
 
-Mocked Gmail/Resend tests
+   - Mocked Gmail/Resend tests
 
-**🚀 Deployment**
+---
+
+## 🚀 Deployment
 
 You can deploy using:
 
-Frontend
+**Frontend** - 
 
-Vercel
+    - Vercel
 
-Netlify
+    - Netlify
 
-AWS Amplify
+    - AWS Amplify
 
-Backend
+**Backend** -
 
-Render
+    - Render
 
-Railway
+    - Railway
 
-Fly.io
+    - Fly.io
 
-Heroku (Procfile included)
+    - Heroku (Procfile included)
 
 Ensure environment variables match production credentials.
 
-**📬 Daily Digest Workflow**
+---
 
-Backend fetches emails
+## 📬 Daily Digest Workflow
 
-AI processes summaries
+    - Backend fetches emails
 
-Digest is generated
+    - AI processes summaries
 
-Resend sends the digest via email
+    - Digest is generated
 
-Frontend displays digest on dashboard
+    - Resend sends the digest via email
 
-**🙌 Contributors**
+    - Frontend displays digest on dashboard
+
+---
+
+## 🙌 Contributors
 
 Udit Chowdary – Full-stack development, backend architecture, OAuth integration
